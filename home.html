@@ -75,5 +75,29 @@
   <footer>
     <p>&copy; 2024, Boooora Volleyball. Todos os direitos reservados</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryItems = document.querySelectorAll('.single-gallery');
+
+      if (window.innerWidth <= 768) {
+        let observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('expanded');
+            } else {
+              entry.target.classList.remove('expanded');
+            }
+          });
+        }, {
+          threshold: 0.5
+        });
+
+        galleryItems.forEach(item => {
+          observer.observe(item);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
