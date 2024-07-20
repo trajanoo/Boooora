@@ -85,7 +85,7 @@ main {
   margin-left: 0px;
 }
 
-.carousel.dragging {
+.carousel.dragging, .carousel.carousel.dragging video {
   cursor: grab;
   scroll-behavior: auto;
 }
@@ -109,6 +109,7 @@ main {
   transform: translateY(-50%);
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .wrapper .material-symbols-outlined:hover {
@@ -134,7 +135,7 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  .carousel img {
+  .carousel img, .carousel video {
     width: calc(100% / 2);
   }
 }
@@ -169,7 +170,7 @@ footer {
   height: 340px;
   object-fit: cover;
   margin-left: 14px;
-  width: calc(100% / 3);
+  width: calc(100%);
 }
 
 .carousel video:first-child {
