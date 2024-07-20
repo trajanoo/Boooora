@@ -164,3 +164,15 @@ footer {
 
   
 }
+
+.carousel video {
+  height: 340px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel video:first-child {
+  margin-left: 0px;
+}
+
