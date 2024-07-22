@@ -11,7 +11,7 @@ body {
 
 header {
   background-color: black;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   border-bottom: 2px solid #DB8F1D;
 }
 
@@ -22,7 +22,7 @@ header {
 }
 
 .logo {
-  width: 100px;
+  width: 6.25rem;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -32,20 +32,20 @@ header {
 
 .title {
   text-align: center;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
 nav {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .menu {
-  padding: 5px 15px;
+  padding: 0.3125rem 0.9375rem;
   text-decoration: none;
   color: #DB8F1D;
   border-radius: 4px 4px 0 0;
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 
 .menu:hover {
@@ -55,7 +55,7 @@ nav {
 
 main {
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@ main {
 
 footer {
   text-align: center;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   background-color: black;
   border-top: 1px solid #DB8F1D;
 }
@@ -72,15 +72,14 @@ footer {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .single-gallery {
   position: relative;
-  width: 200px;
-  height: 500px;
+  width: 12.5rem;
+  height: 31.25rem;
   transition: width 1s;
-
 }
 
 .single-gallery:hover {
@@ -91,7 +90,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .single-gallery .info {
@@ -100,10 +99,10 @@ footer {
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   color: white;
-  padding: 10px;
+  padding: 0.625rem;
   box-sizing: border-box;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .single-gallery .info h1, 
@@ -113,7 +112,7 @@ footer {
 
 .single-gallery .info a {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 0.3125rem;
   color: #DB8F1D;
   text-decoration: none;
   font-weight: bold;
@@ -129,12 +128,11 @@ footer {
   }
 
   .menu {
-    padding: 5px;
-    font-size: 15px;
+    padding: 0.3125rem;
+    font-size: 0.9375rem;
   }
 
   .single-gallery.expanded {
     width: 85%;
   }
-
 }

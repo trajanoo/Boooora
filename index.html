@@ -88,7 +88,7 @@
       <div class="single-gallery">
         <a href="fotos.html">
           <picture>
-            <source srcset="booora5.png" type="image/png>
+            <source srcset="booora5.png" type="image/png">
             <source srcset="booora5.jpg" type="image/jpeg">
             <img src="booora5.jpg" class="bora" alt="Booora Image 5">
           </picture>
@@ -109,26 +109,30 @@
     document.addEventListener('DOMContentLoaded', function() {
       const galleryItems = document.querySelectorAll('.single-gallery');
 
-      if (window.innerWidth <= 768) {
-        let observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('expanded');
-            } else {
-              entry.target.classList.remove('expanded');
-            }
-          });
-        }, {
-          threshold: 0.5
-        });
-
-        galleryItems.forEach(item => {
-          observer.observe(item);
+      function handleIntersect(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('expanded');
+          } else {
+            entry.target.classList.remove('expanded');
+          }
         });
       }
+
+      let observer = new IntersectionObserver(handleIntersect, {
+        threshold: 0.5
+      });
+
+      galleryItems.forEach(item => {
+        observer.observe(item);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          galleryItems.forEach(item => item.classList.remove('expanded'));
+        }
+      });
     });
   </script>
 </body>
 </html>
-
-<!-- by @eutrajaaano -->
