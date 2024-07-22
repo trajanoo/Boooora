@@ -74,7 +74,7 @@ main {
   scroll-behavior: smooth;
 }
 
-.carousel img {
+.carousel img, .carousel > a {
   height: 340px;
   object-fit: cover;
   margin-left: 14px;
@@ -135,14 +135,20 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  .carousel img, .carousel video {
+  .carousel img {
     width: calc(100% / 2);
+  }
+  .carousel video {
+    width: auto;
   }
 }
 
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
+  }
+  .carousel video {
+    width: calc(100% / 1);
   }
 }
 
@@ -170,7 +176,6 @@ footer {
   height: 340px;
   object-fit: cover;
   margin-left: 14px;
-  width: calc(100%);
 }
 
 .carousel video:first-child {
