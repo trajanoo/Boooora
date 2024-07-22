@@ -70,7 +70,7 @@ footer {
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 15px;
 }
@@ -124,6 +124,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .gallery {
+    flex-wrap: wrap;
+  }
 
   .menu {
     padding: 5px;
