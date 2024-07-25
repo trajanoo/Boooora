@@ -128,7 +128,12 @@ footer {
     padding: 5px;
     font-size: 15px;
   }
+
+  .play-icon {
+    display: none;
+  }
 }
+  
 
 .overlay {
   position: absolute;
